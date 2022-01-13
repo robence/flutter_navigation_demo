@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_navigation_demo/screen2.dart';
 
 class Screen1 extends StatelessWidget {
   const Screen1({Key? key}) : super(key: key);
@@ -7,8 +6,7 @@ class Screen1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     void navigateNextScreen() {
-      Navigator.push(
-          context, MaterialPageRoute(builder: (context) => const Screen2()));
+      Navigator.pushNamed(context, '/second');
     }
 
     return Scaffold(

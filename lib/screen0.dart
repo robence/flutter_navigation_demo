@@ -12,6 +12,7 @@ class Screen0 extends StatelessWidget {
       ),
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             ElevatedButton(
               style: ElevatedButton.styleFrom(
@@ -19,14 +20,14 @@ class Screen0 extends StatelessWidget {
               ),
               child: const Text('Go To Screen 1'),
               onPressed: () {
-                //Navigate to Screen 1
+                Navigator.pushNamed(context, '/first');
               },
             ),
             ElevatedButton(
               style: ElevatedButton.styleFrom(primary: Colors.blue),
               child: const Text('Go To Screen 2'),
               onPressed: () {
-                //Navigate to Screen 2
+                Navigator.pushNamed(context, '/second');
               },
             ),
           ],

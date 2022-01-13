@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_navigation_demo/screen0.dart';
 import 'package:flutter_navigation_demo/screen1.dart';
+import 'package:flutter_navigation_demo/screen2.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +18,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         platform: TargetPlatform.iOS,
       ),
-      home: const Screen1(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const Screen0(),
+        '/first': (context) => const Screen1(),
+        '/second': (context) => const Screen2(),
+      },
     );
   }
 }
